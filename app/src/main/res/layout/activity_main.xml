@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        map:cameraBearing="0"
+        map:cameraTargetLng="121.045847"
+        map:cameraTargetLat="14.638935"
+        map:cameraTilt="0"
+        map:cameraZoom="17.57"
+        map:liteMode="false"
+        map:mapType="normal"
+        map:mapColorScheme="light"
+        map:uiCompass="true"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="true"
+        map:uiZoomGestures="true" />
+
+    <!-- map:mapType: none, normal, hybrid, satellite, terrain -->
+    <!-- map:mapColorScheme: light, dark -->
+    <!-- map:cameraBearing: 0-360 -->
+    <!-- map:cameraTargetLat: -90-90 -->
+    <!-- map:cameraTargetLng: -180-180 -->
+    <!-- map:cameraTilt: 0-90 -->
+    <!-- map:cameraZoom: 0-21 -->
+    <!-- map:liteMode: true, false. Lite mode shows a bitmap of the map, giving the user limited control -->
+    <!-- map:uiCompass: true, false -->
+    <!-- map:uiRotateGestures: true, false -->
+    <!-- map:uiScrollGestures: true, false -->
+    <!-- map:uiTiltGestures: true, false -->
+    <!-- map:uiZoomControls: true, false -->
+    <!-- map:uiZoomGestures: true, false -->
+
+    <RadioGroup
+        android:id="@+id/rgMapType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbMapTypeNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/rbMapTypeNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/rbMapTypeHybrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hybrid" />
+
+        <RadioButton
+            android:id="@+id/rbMapTypeSatellite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satelite" />
+
+        <RadioButton
+            android:id="@+id/rbMapTypeTerrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terrain" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnToggleColorScheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toggle Color Scheme" />
+
+    <Button
+        android:id="@+id/btnAnimate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animate" />
+
+</LinearLayout>
